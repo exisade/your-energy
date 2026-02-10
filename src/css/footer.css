@@ -1,21 +1,151 @@
 .footer {
-  padding: 20px 0;
+  background: #1c1c1c;
+  color: #fff;
+  padding: 50px 0 30px;
 }
-.footer-desc {
-  text-align: center;
+
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 64px;
 }
-.footer-link {
-  position: relative;
+
+/* LEFT */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.footer-link::before {
-  content: '';
-  position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+
+.footer__logo {
+  width: 127px;               /* 🔥 как в макете */
+  height: auto;
+  margin-bottom: 20px;        /* 🔥 отступ до соцсетей */
+}
+
+.footer__socials {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #242424;         /* 🔥 квадраты с фоном */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+/* 🔥 ДОБАВИТЬ hover */
+.footer__social-link:hover {
+  background: #fff;
+}
+
+.footer__social-link:hover img {
+  filter: invert(1);           /* 🔥 light → dark при hover */
+}
+
+.footer__social-link img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* CENTER */
+.footer__message {
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.footer__message span {
+  font-style: italic;
+}
+
+.footer__legal {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* RIGHT */
+.footer__subscribe-title {
+  margin-bottom: 16px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 420px;
+}
+
+/* INPUT */
+.footer-input {
+  flex: 1;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.footer-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-input:focus {
+  border-color: #fff;
+}
+
+/* BUTTON */
+.footer-button {
+  height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.25s ease;
+}
+
+.footer-button:hover {
+  background: #eaeaea;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__year {
+  font-size: 14px;
+  opacity: 0.6;
 }

@@ -94,3 +94,15 @@
   border-radius: 1.25rem;
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
 }
+
+.hero-image {
+  border-radius: 48px;
+  overflow: hidden; /* ВАЖНО */
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
